@@ -1,0 +1,11 @@
+<h1>Login Form</h1>
+<form  action="" method="POST">
+{% csrf_token %}
+    username: <input type="text" name="email" placeholder="enter email id"><br/>
+    password: <input type="password" name="password" placeholder="enter the password"><br/>
+    date_of_birth: <input type="date" name="date_of_birth"><br/>
+
+
+    <input type="submit" value="login"><br/>
+    <a href="{%  url 'testapp3:custom_registartion' %}"> Registration </a>
+</form>

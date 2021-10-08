@@ -1,0 +1,18 @@
+<a href=" {% url 'testapp3:home' %} "><h2>Home</h2></a>
+{% if user.is_authenticated %}
+<h2> Recipes List </h2> 
+{% if recipe %}
+    {% for item in recipe %}
+          <a href="{% url 'testapp3:details' item.id %} "> {{item.food_item}}</a><br/>
+    {% endfor %}
+{% else %}
+<p>No data created</p>
+{% endif %}
+<br>
+<br><a href="{% url 'testapp3:create' %}"><h3>Add Recipe</h3></a>
+{% else %}
+<!--<a href="{% url 'testapp3:login' %}"><h3>log_in</h3></a>-->
+<a href="{% url 'testapp3:custom_login' %}"><h3>log_in</h3></a>
+
+{% endif %}
+<a href="{% url 'testapp3:logout' %}"><h3>log_out</h3></a>

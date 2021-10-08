@@ -1,0 +1,12 @@
+<form action="{%url 'testapp3:registration' %}" method="POST">
+<!--<form action="" method="POST"> action method is notmandatory -->
+
+{% csrf_token%}
+    username: <input type="text" name="username" placeholder="enter the name"><br/>
+    email: <input type="email" name="email" placeholder="enter the email_id"><br/>
+    password: <input type="password" name="password"  placeholder="enter the password"><br/>
+    first_name: <input type="text" name="first_name" placeholder="enter your first_name"><br/>
+    last_name: <input type="text" name="last_name" placeholder="enter your last_name"><br/>
+
+      <input type="submit" value="Rigister">
+</form>

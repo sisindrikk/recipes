@@ -1,0 +1,16 @@
+ <a href="{% url 'testapp3:home' %}"><h2>Home</h2></a>
+
+name          : {{recipe.food_item}}<br>
+ingredients   : {{recipe.ingredients}}<br>
+process       : {{recipe.food_process}}<br><br>
+ {%if recipe.recipe_Img %}
+<img src="{{recipe.recipe_Img.url}}" height="300px" width="300px"><br> <br/>
+ <a href ="{{recipe.recipe_Img.url}}">download image</a><br/> <!--dow nload image link created-->
+{% else %}
+ <img src="/../media/images/balaji.jpg" height="300px" width="300px">
+<img src="" alt="image upload soon" height="300px" width="300px"><br>
+{% endif %}
+<br>
+<br>
+<a href="{% url 'testapp3:recipe_list'%}"> BACK </a>
+ <a href="{% url 'testapp3:logout'%}"><h2>logout</h2> </a>

@@ -1,0 +1,12 @@
+<a href="{% url 'testapp3:home' %}"><h2>Home</h2></a>
+
+{% if recipe %}
+    {% for item in recipe %}
+<a href= "{% url 'testapp3:details' item.id %}"> {{item.food_item}}</a><br>
+    {% endfor %}
+{% else %}
+<p>No data created</p>
+{% endif %}
+<br>
+<br><a href="{% url 'testapp3:create'%}"><h3>Add Recipe</h3></a>
+<a href="{% url 'testapp3:logout'%}"><h2>logout</h2> </a>
